@@ -11,12 +11,13 @@ function App() {
       alert("Please enter value!");
     }else {
       alert(`There are ${countVowel(item)} vowels!`);
+      setItem('');
     }
   }
 
   useEffect(() => {
     inputField.current.focus();
-  }, []);
+  }, [item]);
 
   const countVowel = (item) => {
     const regex = /[a,á,e,é,i,í,o,ó,ö,ő,u,ú,ü,ű,A,Á,E,É,I,Í,O,Ó,Ö,Ő,U,Ú,Ü,Ű]/g;
